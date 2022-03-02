@@ -8,13 +8,56 @@ con difficoltà 3 => tra 1 e 49
 */
 
 // richiesta del utente di attivare la funzione
+function generatore(){
+    
 
     // raccogli scelta utente di difficoltà /-/ i valori sono già indicati nel input html quindi questo dato sarà sfruttato nel if.
+    const scelta = document.getElementById(`difficolta`).value;
+    
+        alert(scelta)
+
+    // indenta le 3 diverse scelte (tanto sono identiche varia solo il numero) . /-/ contengono il ciclo per generare le caselle che verranno inserite nel html da js.
+
+    if ( parseInt(scelta) === 1 ) {
+        let contenitore =document.querySelector(`.contenitore`);
+
+        contenitore.classList.add("cento")
+
+        for (let generatorePrimo = 1; generatorePrimo < 101; generatorePrimo++) {
+
+            contenitore.innerHTML += `<div class="cella"> ${generatorePrimo}</div>`;
+            
+        }
 
 
-    // indenta le 3 diverse scelte (tanto sono identiche varia solo il numero) + 1 in cui l'utente sceglie il suo numero a scelta libera . /-/ contengono il ciclo per generare le caselle che verranno inserite nel html da js.
 
+    } else if ( parseInt(scelta) === 2 ){
+        
+        let contenitore =document.querySelector(`.contenitore`);
 
+        contenitore.classList.add("ottanta")
+
+        for (let generatorePrimo = 1; generatorePrimo < 82; generatorePrimo++) {
+
+            contenitore.innerHTML += `<div class="cella"> ${generatorePrimo}</div>`;
+            
+        }
+
+    } else if ( parseInt(scelta) === 3 ){
+
+        let contenitore =document.querySelector(`.contenitore`);
+
+        contenitore.classList.add("quaranta")
+
+        for (let generatorePrimo = 1; generatorePrimo < 49; generatorePrimo++) {
+
+            contenitore.innerHTML += `<div class="cella"> ${generatorePrimo}</div>`;
+            
+        }
+
+    }
+
+}
 /*
 Lasciate perdere il cambiamento del colore della cella (serve una cosa che oggi non abbiamo visto). Qundi le celle saranno tutte dello stesso colore e non succede niente quando le clicchiamo.
 */
@@ -31,3 +74,5 @@ Proviamo sempre prima con dei console.log() per capire se stiamo ricevendo i dat
 Le validazioni e i controlli possiamo farli anche in un secondo momento.
 ------------------------------------------------------------
 non mi piacciono i consol.log -.-
+
+*/

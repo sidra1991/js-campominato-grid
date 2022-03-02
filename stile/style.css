@@ -12,8 +12,8 @@ header {
 
 }
 
-.lato-header {
-    display: flex;
+.lato-header *{
+    display: inline-block;
 }
 
 
@@ -34,6 +34,20 @@ main {
     border:5px solid black;
     min-width: 3rem;
     max-width: 100%;
+    overflow: hidden;
+}
+
+.cento{
+    width: 490px;
+}
+
+.ottanta {
+
+    width: 394px;
+}
+
+.quaranta {
+    width: 202px;
 }
 
 /* stile del footer */
@@ -46,4 +60,7 @@ main {
     height :3rem;
     width: 3rem;
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
