@@ -20,8 +20,9 @@ function generatore(){
 
     if ( parseInt(scelta) === 1 ) {
         let contenitore =document.querySelector(`.contenitore`);
-
-        contenitore.classList.add("cento")
+        contenitore.classList.remove("ottanta");
+        contenitore.classList.remove("quaranta");
+        contenitore.classList.add("cento");
 
         for (let generatorePrimo = 1; generatorePrimo < 101; generatorePrimo++) {
 
@@ -34,8 +35,9 @@ function generatore(){
     } else if ( parseInt(scelta) === 2 ){
         
         let contenitore =document.querySelector(`.contenitore`);
-
-        contenitore.classList.add("ottanta")
+        contenitore.classList.remove("cento");
+        contenitore.classList.remove("quaranta");
+        contenitore.classList.add("ottanta");
 
         for (let generatorePrimo = 1; generatorePrimo < 82; generatorePrimo++) {
 
@@ -46,8 +48,9 @@ function generatore(){
     } else if ( parseInt(scelta) === 3 ){
 
         let contenitore =document.querySelector(`.contenitore`);
-
-        contenitore.classList.add("quaranta")
+        contenitore.classList.remove("cento");
+        contenitore.classList.remove("ottanta");
+        contenitore.classList.add("quaranta");
 
         for (let generatorePrimo = 1; generatorePrimo < 49; generatorePrimo++) {
 
