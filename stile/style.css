@@ -1,11 +1,49 @@
 /* stile del head della pagina */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
 
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.lato-header {
+    display: flex;
+}
 
 
 /* stile del contenitore */
+main {
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
 
+}
+
+.contenitore {
+    display: flex;
+    flex-wrap: wrap;
+    height: 30rem;
+    border:5px solid black;
+    min-width: 3rem;
+    max-width: 100%;
+}
 
 /* stile del footer */
 
 
+
 /* stile delle celle */
+
+.cella {
+    height :3rem;
+    width: 3rem;
+    border: 1px solid black;
+}

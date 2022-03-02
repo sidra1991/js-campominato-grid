@@ -10,26 +10,25 @@
 <body>
     <!-- header /-/ contiene un logo /-/ contiene l'input select con 4 voci -->
     <header>
-        <div>
+        <div class="lato-header" >
             <h1>logo (mancante)</h1>
             <h1> CAMPO MINATO </h1>
         </div>
-        <div>
+        <div class="lato-header" >
             <label for="difficolta">difficolta:</label>
-            <select name="difficolta" id="" disabled="disabled">
+            <select name="difficolta" id="difficolta">
                 <option value="1"> facile </option>
                 <option value="2"> medio </option>
                 <option value="3"> difficile </option>
-                <option value="4"> personalizzato <input type="number" id="personalizzato" placeholder="quante caselle?" > </option>
             </select>
+            <button type="button" onclick="generatore()" > genera </button>
         </div>
     </header>
-
 
     <!-- contenitore su uno sfondo colorato-->
     <main>
         <div class="contenitore" > 
-            <div class="" >
+            <div class="cella" >
                 <!-- riquadro di prova -->
             </div>
         </div>
