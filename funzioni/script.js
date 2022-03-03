@@ -28,6 +28,10 @@ function generatore(){
         cella.innerHTML = `${generatore}`;
 
         contenitore.append(cella)
+
+        cella.addEventListener(`click`, function() {
+            cella.style.backgroundColor=`blue`            
+        } )
         
         if (parseInt(celle) === 100) {
             cella.classList.add("facile");
@@ -45,6 +49,7 @@ function generatore(){
         
     }
     
+
 
 }
 
