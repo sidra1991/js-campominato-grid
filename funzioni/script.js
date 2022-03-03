@@ -7,60 +7,47 @@ con difficoltà 2 => tra 1 e 81
 con difficoltà 3 => tra 1 e 49
 */
 
+ const contenitore = document.getElementById(`contenitore`)
+
 // richiesta del utente di attivare la funzione
 function generatore(){
+    let celle = document.getElementById(`difficolta`).value;
+    contenitore.innerHTML='';
+    console.log(`log delle celle ${celle}`)
     
-
-    // raccogli scelta utente di difficoltà /-/ i valori sono già indicati nel input html quindi questo dato sarà sfruttato nel if.
-    const scelta = document.getElementById(`difficolta`).value;
-    
-        alert(scelta)
 
     // indenta le 3 diverse scelte (tanto sono identiche varia solo il numero) . /-/ contengono il ciclo per generare le caselle che verranno inserite nel html da js.
 
-    if ( parseInt(scelta) === 1 ) {
-        let contenitore =document.querySelector(`.contenitore`);
-        contenitore.classList.remove("ottanta");
-        contenitore.classList.remove("quaranta");
-        contenitore.classList.add("cento");
-
-        for (let generatorePrimo = 1; generatorePrimo < 101; generatorePrimo++) {
-
-            contenitore.innerHTML += `<div class="cella"> ${generatorePrimo}</div>`;
-            
-        }
-
-
-
-    } else if ( parseInt(scelta) === 2 ){
+    for (let generatore = 1; generatore < celle; generatore++) {
         
-        let contenitore =document.querySelector(`.contenitore`);
-        contenitore.classList.remove("cento");
-        contenitore.classList.remove("quaranta");
-        contenitore.classList.add("ottanta");
 
-        for (let generatorePrimo = 1; generatorePrimo < 82; generatorePrimo++) {
+        const cella = document.createElement(`div`);
 
-            contenitore.innerHTML += `<div class="cella"> ${generatorePrimo}</div>`;
-            
+        console.log(generatore)
+
+        cella.innerHTML = `${generatore}`;
+
+        contenitore.append(cella)
+        
+        if (parseInt(celle) === 100) {
+            cella.classList.add("facile");
+            cella.classList.remove("medio");
+            cella.classList.remove("difficile")
+        } else if (parseInt(celle) === 80) {
+            cella.classList.add("medio");
+            cella.classList.remove("facile");
+            cella.classList.remove("difficile")
+        } else if ( parseInt(celle) === 50 ){
+            cella.classList.add("difficile");
+            cella.classList.remove("medio");
+            cella.classList.remove("facile")
         }
-
-    } else if ( parseInt(scelta) === 3 ){
-
-        let contenitore =document.querySelector(`.contenitore`);
-        contenitore.classList.remove("cento");
-        contenitore.classList.remove("ottanta");
-        contenitore.classList.add("quaranta");
-
-        for (let generatorePrimo = 1; generatorePrimo < 49; generatorePrimo++) {
-
-            contenitore.innerHTML += `<div class="cella"> ${generatorePrimo}</div>`;
-            
-        }
-
+        
     }
+    
 
 }
+
 /*
 Lasciate perdere il cambiamento del colore della cella (serve una cosa che oggi non abbiamo visto). Qundi le celle saranno tutte dello stesso colore e non succede niente quando le clicchiamo.
 */

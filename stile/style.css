@@ -32,14 +32,12 @@ main {
     height: 100%;
 }
 
-.contenitore {
+#contenitore {
     display: flex;
     flex-wrap: wrap;
     width: 400px;
     height:400px;
     border:5px solid black;
-    min-width: 3rem;
-    max-width: 100%;
     overflow: hidden;
 }
 
@@ -50,27 +48,27 @@ main {
 
 /* stile delle celle */
 
-.cella-facile {
-    width: 100% / 10;
-    height: 100% / 10;
+.facile{
+    width: calc( 100% / 10 );
+    height: calc( 100% / 10 );
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.cella-medio {
-    width: 100% / 10;
-    height: 100% / 8;
+.medio{
+    width: calc( 100% / 10 );
+    height:calc( 100% / 8 );
     border: 1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.cella-difficile {
-    width: 100% / 10;
-    height: 100% / 5;
+.difficile{
+    width: calc( 100% / 10 );
+    height:calc( 100% / 5 );
     border: 1px solid black;
     display: flex;
     justify-content: center;
