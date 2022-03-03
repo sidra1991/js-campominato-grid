@@ -58,6 +58,7 @@ function generatore(){
           bombe.push(bomba)  
         }
 
+        campo.splice( bomba,0,bomba )
     }
         
   
