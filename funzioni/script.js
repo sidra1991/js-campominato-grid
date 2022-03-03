@@ -53,8 +53,11 @@ function generatore(){
     for (let bomb = 0; bombe.length  < 16; bomb++) {
         let bomba = Math.floor(Math.random() * campo.length);
         console.log(bomba)
-        bombe.push(`${bomba}`);
-   
+        
+        if (bombe.includes(bomba,0) == false) {
+          bombe.push(bomba)  
+        }
+
     }
         
   
